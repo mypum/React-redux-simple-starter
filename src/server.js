@@ -8,7 +8,7 @@ var webpack = require('webpack');
 var webpackConfig = require('../webpack.config.js');
 var compiler = webpack(webpackConfig);
 app.use(require("webpack-dev-middleware")(compiler, {
-    noInfo: true, 
+    noInfo: true,
     publicPath: webpackConfig.output.publicPath
 }));
 app.use(require("webpack-hot-middleware")(compiler));
@@ -23,6 +23,8 @@ app.use((req, res) => {
 		        <title></title>
 		        <meta name="description" content="">
 		        <meta name="viewport" content="width=device-width, initial-scale=1">
+		        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.14/css/bulma.css" />
+		        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 		    </head>
 		    <body>
 				<div id="app"></div>
