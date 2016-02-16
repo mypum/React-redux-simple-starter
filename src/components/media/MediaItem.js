@@ -1,37 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const MediaItem = () => {
-	return (
-	<article className="media">
-        <figure className="media-left">
-          <p className="image is-64x64">
-            <img src="http://placehold.it/128x128" />
-          </p>
-        </figure>
-        <div className="media-content">
-          <div className="content">
-            <p>
-              <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
-            </p>
-          </div>
-          <nav className="navbar">
-            <div className="navbar-left">
-              <a className="navbar-item">
-                <span className="icon is-small"><i className="fa fa-reply"></i></span>
-              </a>
-              <a className="navbar-item">
-                <span className="icon is-small"><i className="fa fa-retweet"></i></span>
-              </a>
-              <a className="navbar-item">
-                <span className="icon is-small"><i className="fa fa-heart"></i></span>
-              </a>
+class MediaItem extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+    render() {
+        return (
+
+            <div className="media-object">
+                <div className="media-object-section">
+                <h4>{this.props.title}</h4>
+                <p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+                </div>
             </div>
-          </nav>
-        </div>
-      </article>
-	);
+
+        );
+    }
 }
 
 export default MediaItem;

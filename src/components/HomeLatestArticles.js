@@ -30,7 +30,7 @@ const HomeLatestArticles = () => {
 		<div>
 			{articles.map(function(article, index){
 				return (
-					<MediaItem key={article.id}/>
+					<MediaItem key={article.id} title={article.title} />
 				);
 			})}
 		</div>
